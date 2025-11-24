@@ -1,0 +1,15 @@
+@startuml
+class Employee {
+  - id: int
+  - name: String
+}
+
+class TimeRecord {
+  - id: int
+  - employeeId: int
+  - checkIn: DateTime
+  - checkOut: DateTime
+}
+
+Employee "1" --> "0..*" TimeRecord : has >
+@enduml
